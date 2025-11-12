@@ -7,56 +7,57 @@ body {
     color: white;
     max-width: auto;
     position: relative;
+    align-self: center;
 }
-.nav{
-    padding-left: 10px;
-    width: 130px;
-    overflow: hidden;
+.sidebar{
+    padding: 20px;
+    padding-top: 0;
+    width: 200px;    
     position: fixed;
-    padding: 5px;
+    height: 100%;
+    overflow: auto;
+    
 
 }
 
-.nav ul {
+.sidebar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    text-align: right;
 }
 
-.nav a {
-    display:list-item;
-    text-decoration: none;
-    color: white;
-    text-align: left;
-    padding-top: 5px;
-
-}
-
-.nav a:hover {
-    color: #ff2d26;
-}
-
-
-.main {
-    margin-top: 10px;
-    margin-left: 170px;
-    display: block;
-    padding-left: 0;
+div.content {
+    width: auto;
+    margin-left: 250px;
+    
+  
 }   
 
 .grid {
-    padding-left: 0%;
     display: grid;
-    grid-template-columns: auto auto auto;
-    list-style: none;
-    grid-auto-flow: row;
-    max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%),1fr));
+    gap: 10px;
+}
 
-}
-.grid img {
-    width: 100%;
-    height: 100%;
+.card {
+    height: 400px;
+    width: auto;
+    background-color: #444444;
+    overflow: hidden;
+    border-radius: 5px;
     
-    object-fit: cover; /* Or 'contain' or 'fill' */
 }
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    
+}
+
+
+
+
+
